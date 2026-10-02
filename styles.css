@@ -1,1 +1,149 @@
+/* General Page Styling */
+body {
+  margin: 0;
+  padding: 20px 0;
+  background-color: #EDF2F7;
+  color: #2D3748;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
 
+/* 1. CSS Grid Layout */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.site-header {
+  grid-column: 1 / -1;
+}
+
+.site-footer {
+  grid-column: 1 / -1;
+}
+
+/* 2. Header Flexbox Alignment */
+.site-header {
+  background-color: #2C5282;
+  color: #FFFFFF;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.site-header h1 {
+  font-size: 36px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0 0 10px 0;
+}
+
+.tagline {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* 3. Main Content & Articles */
+.main-content {
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.blog-post {
+  margin-bottom: 30px;
+  overflow: hidden; /* Contains floats inside each post */
+}
+
+.blog-post:not(:last-child) {
+  border-bottom: 1px solid #E2E8F0; /* Light-grey post divider */
+  padding-bottom: 30px;
+}
+
+.blog-post h2 {
+  font-size: 32px;
+  color: #276749;
+  margin: 0 0 5px 0;
+}
+
+.post-meta {
+  color: #4A5568;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Floated Article Images */
+.post-img.float-left {
+  float: left;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+/* 4. Sidebar Elements */
+.sidebar {
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.sidebar-section {
+  margin-bottom: 25px;
+}
+
+.sidebar h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 0;
+}
+
+.about-section {
+  background-color: #E2E8F0;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.about-section h3 {
+  color: #000000;
+}
+
+.sidebar-section:not(.about-section) h3 {
+  color: #276749;
+}
+
+.sidebar ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.sidebar a {
+  color: #2B6CB0;
+}
+
+/* 5. Footer */
+.site-footer {
+  background-color: #2C5282;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 20px;
+}
+
+.site-footer p {
+  margin: 0;
+}
